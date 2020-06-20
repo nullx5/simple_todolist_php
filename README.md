@@ -2,7 +2,7 @@
 
 ## setup
 
-> $sudo systemctl start mysql
+  $sudo systemctl start mysql
   $sudo systemctl start apache2
 
   $sudo git clone git@github.com:nullx5/simple_todolist_php.git 
