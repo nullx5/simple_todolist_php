@@ -1,8 +1,8 @@
 <?php
-	$servername = "localhost";
-	$DBname = "todolist";
-	$username = "root";
-	$password = "";
+	$servername = "sql202.epizy.com";
+	$DBname = "epiz_33117728_todolist";
+	$username = "epiz_33117728";
+	$password = "iioUF7kRIh";
 	
     $connectionPDO = new PDO("mysql:host=$servername;dbname=$DBname;charset=utf8", $username, $password);
 ?>
@@ -17,14 +17,14 @@
 </head>
 
 <body class="container">
-    <h1>Add Task</h1>
+    <h1>Agregar Nueva Tarea</h1>
     <form method="post" action="">
         <input type="text" name="name" value="">
-        <input type="submit" name="submit" value="Add">
+        <input type="submit" name="submit" value="ENVIAR">
     </form>
-    <h2>List of Tasks</h2>
+    <h2>Lista de Tareas</h2>
     <table class="table table-striped">
-        <thead><th>Tasks</th><th></th></thead>
+        <thead><th>Tareas</th><th></th></thead>
         <tbody>
 <?php
        if(isset($_POST["submit"]) ){
@@ -48,7 +48,7 @@
                 <td><?= $row["name"] ?></td>
                 <td>
                     <form method="POST">
-                        <button type="submit" name="delete">Delete</button>
+                        <button type="submit" name="delete">Eliminar</button>
                         <input type="hidden" name="id" value="<?= $row["id"] ?>">
                     </form>
                 </td>
